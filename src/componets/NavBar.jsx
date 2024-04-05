@@ -44,7 +44,7 @@ const NavBar = () => {
             href="/"
             className="text-2xl font-semibold flex items-center space-x-3"
           >
-            <span className="text-[2c2d36]">Danushan Ravindran</span>
+            <span className="text-[2c2d36]">Danushan Ravendran</span>
           </a>
           <ul className="md:flex space-x-12 hidden">
             {navItems.map(({ link, path }) => (
