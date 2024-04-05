@@ -2,7 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+
     extend: {
+      fontFamily:{
+        'butler-ultra-light':['Butler','sans-serif'],
+        'Butler-regular':['Butler','sans-serif'],
+        'Jost':['Jost', 'sans-seri'],
+
+      },
       colors: {
         "primary-bg": "#edded3",
         "primary-ash": "#72855d",
