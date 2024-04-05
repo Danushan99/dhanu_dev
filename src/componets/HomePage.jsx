@@ -7,7 +7,7 @@ import Slide from './Slide'
 const HomePage = () => {
   return (
     <div className='bg-Home'>
-<Top/>
+{/* <Top/> */}
       <NavBar/>
       <Slide/>
     </div>
