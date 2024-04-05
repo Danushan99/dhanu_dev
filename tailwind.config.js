@@ -3,6 +3,13 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily:{
+        fontFamily: {
+          'butler': ['butler', 'sans-serif'],
+          'butler-light': ['butler-light', 'sans-serif'],
+          'butler-ultra-light': ['butler-ultra-light', 'sans-serif']
+
+      },
       colors: {
         "primary-bg": "#edded3",
         "primary-ash": "#72855d",
@@ -22,4 +29,4 @@ export default {
     },
   },
   plugins: [],
-};
+  }}

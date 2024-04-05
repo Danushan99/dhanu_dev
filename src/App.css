@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "butler";
+  src: url(./assets/fonts/Butler_Regular.otf);
+}
+@font-face {
+  font-family: "butler-light";
+  src: url(./assets/fonts/Butler_Light.otf);
+}
+@font-face {
+  font-family: "butler-ultra-light";
+  src: url(./assets/fonts/Butler_Ultra_Light.otf);
+}
