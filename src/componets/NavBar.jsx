@@ -6,6 +6,13 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
+  const handleCallButtonClick = () => {
+    const confirmCall = window.confirm("Are you sure you want to call +94 779299587?");
+    if (confirmCall) {
+      window.location.href = "tel:+94779299587";
+    }
+    
+  }; 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -44,7 +51,7 @@ const NavBar = () => {
         }`}
       >
         <h1>SOFTWARE ENGINEER</h1>
-        <h1>TEXT OR TALK • <a href="+94779299587">+94 779299587</a></h1>
+        <h1>TEXT OR TALK • <a href="#" onClick={handleCallButtonClick}>+94 779299587</a></h1>
       </div>
       <nav className='py-4 bg-nav-bar lg:px-14 px-4 ${isSticky ? "sticky top-0 right-0 left-0 border-b transition-all bg-gray-4 duration-300 : "" }'>
         <div className="flex justify-between items-center text_base gap-8  border-b-2 border-white ">
@@ -74,7 +81,7 @@ const NavBar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="text-black bg-transparent font-bold text-xl outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+              <button className="text-black bg-transparent  duration-150">
                 <FaInstagram className="w-7 h-7" />
               </button>
             </a>
