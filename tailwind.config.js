@@ -4,6 +4,7 @@ export default {
   theme: {
 
     extend: {
+      
       fontFamily:{
         'butler-ultra-light':['Butler','sans-serif'],
         'Butler-regular':['Butler','sans-serif'],
