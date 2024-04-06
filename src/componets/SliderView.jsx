@@ -22,17 +22,15 @@ function SliderView() {
                     <h2 className="font-bold font-Butler-regular text-3xl md:text-5xl lg:text-6xl">
                       Make your next move your best move.
                     </h2>
-                    
+
                     <div className="mt-4 flex flex-wrap justify-center">
-  <button className="box-border border border-black bg-black text-white font-bold py-2 px-4 mb-2 md:mb-0 md:mr-2 w-full md:w-auto hover:bg-gray-1 hover:text-nav-bar transition duration-300 ease-in-out">
-    Hire Me
-  </button>
-  <button className="box-border border bg-black border-black bg-transparent text-white font-bold py-2 px-4 w-full md:w-auto hover:nav-bar hover:text-gray-800 transition duration-300 ease-in-out">
-    Download Cv
-  </button>
-</div>
-
-
+                      <button className="box-border border border-black bg-black text-white font-bold py-2 px-4 mb-2 md:mb-0 md:mr-2 w-full md:w-auto hover:bg-gray-1 hover:text-nav-bar transition duration-300 ease-in-out">
+                        Hire Me
+                      </button>
+                      <button className="box-border border bg-black border-black bg-transparent text-white font-bold py-2 px-4 w-full md:w-auto hover:nav-bar hover:text-gray-800 transition duration-300 ease-in-out">
+                        Download Cv
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

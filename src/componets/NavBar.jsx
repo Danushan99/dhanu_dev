@@ -74,7 +74,7 @@ const NavBar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="text-black bg-transparent hover:text-gray-100 font-bold text-xl outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+              <button className="text-black bg-transparent font-bold text-xl outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                 <FaInstagram className="w-7 h-7" />
               </button>
             </a>

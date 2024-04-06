@@ -5,8 +5,8 @@ function Slide() {
   return (
     <div className="p-20">
       <div className="flex flex-col md:flex-row justify-center items-center p-20 h-full">
-                {/* Image */}
-                <div className="w-full md:w-1/2 md:order-1 ">
+        {/* Image */}
+        <div className="w-full md:w-1/2 md:order-1 ">
           <img src={myImage} className="w-full h-auto md:max-w-lg" alt="..." />
         </div>
         {/* Text, Name, Buttons */}
@@ -31,8 +31,6 @@ function Slide() {
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   );
