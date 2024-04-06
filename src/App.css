@@ -33,10 +33,13 @@
 }
 
 .large-title-row{
-    /* @apply grid grid-cols-2 gap-x-2 gap-y-12 */
-    @apply grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-12;
+ 
+    @apply grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-12;
+    padding: auto;
+    
 }
 
 .large-title-content{
-    @apply flex justify-center items-center 
+    @apply flex justify-center items-center p-4
+    
 }

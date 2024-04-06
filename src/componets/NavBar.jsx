@@ -36,18 +36,24 @@ const NavBar = () => {
       className={`w-full ${
         isSticky ? "bg-home" : "bg-home"
       } fixed  left-0 right-0`}
-    >  <div className={` flex justify-between py-2 px-20 bg-cont font-Jost ${isSticky ? "hidden" : "block"}`}>
-    <h1>SOFTWARE ENGINEER</h1>
-    <h1>TEXT OR TALK • (+94)779299587</h1>
-  </div>
-      <nav className='  py-4 bg-home lg:px-14 px-4 ${isSticky ? "sticky top-0 right-0 left-0 border-b transition-all bg-gray-4 duration-300 : "" }'>
+    >
+      {" "}
+      <div
+        className={` flex justify-between py-2 px-20 bg-cont font-Jost ${
+          isSticky ? "hidden" : "block"
+        }`}
+      >
+        <h1>SOFTWARE ENGINEER</h1>
+        <h1>TEXT OR TALK • (+94)779299587</h1>
+      </div>
+      <nav className='py-4 bg-nav-bar lg:px-14 px-4 ${isSticky ? "sticky top-0 right-0 left-0 border-b transition-all bg-gray-4 duration-300 : "" }'>
         <div className="flex justify-between items-center text_base gap-8  border-b-2 border-white ">
           {/* border-b-2 border-black  */}
           <a
             href="/"
             className="text-2xl font-semibold flex items-center space-x-3"
           >
-            <span className="text-3xl font-Butler-regular  pl-5">
+            <span className="text-3xl font-Butler-regular ">
               Danushan Ravendran
             </span>
           </a>
@@ -55,7 +61,7 @@ const NavBar = () => {
             {navItems.map(({ link, path }) => (
               <li
                 key={path}
-                className="block text-base text-gray-1 hover:text-gray-1 first:font-medium"
+                className="block text-base text-black hover:text-gray-1 first:font-medium"
               >
                 <a href={`/${path}`}>{link}</a>
               </li>
@@ -63,13 +69,6 @@ const NavBar = () => {
           </ul>
 
           <div className="space-x-12 hidden lg:flex items-center">
-            {/* <a
-              href="/"
-              className="hidden lg:flex items-center text-black hover: text-primary-ash"
-            >
-              {" "}
-              Login
-            </a> */}
             <a
               href="https://www.instagram.com/dhanu_thazan_/"
               target="_blank"
@@ -88,10 +87,6 @@ const NavBar = () => {
                 <FaFacebookF className="w-7 h-7" />
               </button>
             </a>
-
-            {/* <button className=" bg-gray-1 text-white py-2 px-4 transition-all duration-300 rounded hover:bg--gray-1">
-              Sign up
-            </button> */}
           </div>
 
           {/* menu for btn mobile */}

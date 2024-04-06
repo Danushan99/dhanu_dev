@@ -25,7 +25,7 @@ function Slide() {
               <button className="box-border border border-black  text-white font-bold py-2 px-4 mr-2 hover:bg-gray-1 hover:text-gray-800 transition duration-300 ease-in-out">
                 Hire Me
               </button>
-              <button className="box-border border bg-black border-black bg-transparent text-white font-bold py-2 px-4 hover:nav-bar hover:text-gray-800 transition duration-300 ease-in-out bg-gray-1">
+              <button className="box-border border bg-black border-black bg-transparent text-white font-bold py-2 px-4 hover:nav-bar hover:text-gray-800 transition duration-300 ease-in-out">
                 Download Cv
               </button>
             </div>
