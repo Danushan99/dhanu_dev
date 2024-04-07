@@ -18,15 +18,6 @@ function AboutPage() {
           success as a team. I'm also interested in new technologies and have
           the mindset to learn and adapt to new things.
         </p>
-
-        {/* <div className="">
-          <img
-            src={myImage}
-            alt="Photo "
-            className="object-contain md:object-scale-down "
-          />
-          
-        </div> */}
       </div>
     </section>
   );

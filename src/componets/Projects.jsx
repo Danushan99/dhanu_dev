@@ -74,12 +74,7 @@ function Projects() {
                     management system comprising .NET Web API backend for
                     booking and data management
                   </li>
-                  <li>
-                    {" "}
-                    Led multidisciplinary teams, ensuring agile development,
-                    integration of third-party APIs, and robust testing.
-                    Provided documentation and training for stakeholders.
-                  </li>
+                
                   <li>
                     {" "}
                     Technologies used : .NET Framework, C, ASP.NET Web API,
@@ -111,19 +106,14 @@ function Projects() {
               <p className="mb-2 text-sm text-gray-600">
                 <ul>
                   <li>
-                    {" "}
+       
                     Developed an Enterprise Application For Train ticket
                     management system comprising .NET Web API backend for
                     booking and data management
                   </li>
+          
                   <li>
-                    {" "}
-                    Led multidisciplinary teams, ensuring agile development,
-                    integration of third-party APIs, and robust testing.
-                    Provided documentation and training for stakeholders.
-                  </li>
-                  <li>
-                    {" "}
+             
                     Technologies used : .NET Framework, C, ASP.NET Web API,
                     Java/Kotlin for Android, ReactJs, and RESTful API design.
                   </li>
