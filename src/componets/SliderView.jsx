@@ -13,7 +13,7 @@ function SliderView() {
                 alt="Photo"
                 className="large-title-grid-image object-contain md:object-scale-down w-full"
               />
-              <div className="large-title-content bg-primary-1 px-4">
+              <div className="large-title-content bg-primary-1 p-40">
                 <div className="content-width-large">
                   <div className="text-center">
                     <p className="text-gray-700  font-Jost  md:font-medium">
@@ -22,14 +22,15 @@ function SliderView() {
                     <h2 className="font-bold font-Butler-regular text-3xl md:text-5xl lg:text-6xl">
                       Make your next move your best move.
                     </h2>
-
-                    <div className="mt-4 flex flex-wrap justify-center">
-                      <button className="box-border border border-black bg-black text-white font-bold py-2 px-4 mb-2 md:mb-0 md:mr-2 w-full md:w-auto hover:bg-gray-1 hover:text-nav-bar transition duration-300 ease-in-out">
-                        Hire Me
-                      </button>
-                      <button className="box-border border bg-black border-black bg-transparent text-white font-bold py-2 px-4 w-full md:w-auto hover:nav-bar hover:text-gray-800 transition duration-300 ease-in-out">
-                        Download Cv
-                      </button>
+                    <div className="w-full flex justify-center mt-20 ">
+                      <div className="flex flex-col  items-center gap-4 sm:flex-row justify-center max-w-[400px] w-full h-[60px]">
+                        <button className=" flex-1 lg:w-[60%] w-full box-border border border-black bg-primary-1 hover:text-white font-bold py-2 px-4md:mb-0  h-[60px] md:w-auto hover:bg-gray-1 hover:text-nav-bar transition duration-300 text-black ease-in-out">
+                          Hire Me
+                        </button>
+                        <button className=" flex-1 lg:w-[40%] w-full box-border border bg-gray-1 hover:bg-transparent border-black  text-white font-bold py-2 h-[60px]  px-4 md:w-auto hover:nav-bar hover:text-gray-800 transition duration-300 ease-in-out">
+                          Download Cv
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>

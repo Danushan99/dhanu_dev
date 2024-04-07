@@ -2,6 +2,9 @@ import React from "react";
 import NavBar from "./NavBar";
 import AboutPage from "./About";
 import SliderView from "./SliderView";
+import Card from "./Card";
+import Top from "./Projects";
+import Footer from "./Footer";
 
 const HomePage = () => {
   return (
@@ -9,7 +12,9 @@ const HomePage = () => {
       <NavBar />
       <SliderView />
       <AboutPage />
-    </div>
+      <Top/>
+      <Footer/>
+  </div>
   );
 };
 
