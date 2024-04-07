@@ -12,7 +12,7 @@ function Projects() {
           Projects That I worked
         </h1>
       </div>
-      <div className="max-w-screen-2xl mx-auto p-16">
+      <div className="max-w-screen-2xl mx-auto md:p-16 p-10">
         <div className="flex lg:flex-row flex-col justify-center gap-10">
           <div className="hover:bg-primary-1 hover:text-black transition duration-300 max-w-sm rounded overflow-hidden shadow-lg">
             <div className="py-4 px-8">
