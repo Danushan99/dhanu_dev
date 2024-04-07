@@ -6,7 +6,8 @@ export default {
       fontFamily: {
         "butler-ultra-light": ["Butler", "sans-serif"],
         "Butler-regular": ["Butler", "sans-serif"],
-        Jost: ["Jost", "sans-seri"],
+        "Butler-Free-Lgt": ["Butler", "sans-serif"],
+        "Jost": ["Jost", "sans-seri"],
       },
       colors: {
         "primary-bg": "#edded3",

@@ -12,6 +12,10 @@
   src: url(./assets/fonts/Butler_Regular.otf);
 }
 
+@font-face {
+  font-family: "Butler-Free-Lgt";
+  src: url(./assets/fonts/Butler-Free-Lgt.otf);
+}
 .section {
   @apply pt-24 pb-24;
 }

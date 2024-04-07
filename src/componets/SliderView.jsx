@@ -1,6 +1,12 @@
 import React from "react";
 import myImage from "../assets/me.jpg";
 
+function navigateToUrl() {
+  const cvUrl =
+    "https://drive.google.com/file/d/1PyL1eWm7zp-2L6wPSwzzzbPiUXoiHZsj/view?usp=drive_link";
+  window.location.href = cvUrl;
+}
+
 function SliderView() {
   return (
     <div className="flex p-0 md:p-0">
@@ -27,7 +33,10 @@ function SliderView() {
                         <button className=" flex-1 lg:w-[60%] w-full box-border border border-black bg-primary-1 hover:text-white font-bold py-2 px-4md:mb-0  h-[60px] md:w-auto hover:bg-gray-1 hover:text-nav-bar transition duration-300 text-black ease-in-out">
                           Hire Me
                         </button>
-                        <button className=" flex-1 lg:w-[40%] w-full box-border border bg-gray-1 hover:bg-transparent border-black  text-white font-bold py-2 h-[60px]  px-4 md:w-auto hover:nav-bar hover:text-gray-800 transition duration-300 ease-in-out">
+                        <button
+                          className=" flex-1 lg:w-[40%] w-full box-border border bg-gray-1 hover:bg-transparent border-black  text-white font-bold py-2 h-[60px]  px-4 md:w-auto hover:nav-bar hover:text-gray-800 transition duration-300 ease-in-out"
+                          onClick={navigateToUrl}
+                        >
                           Download Cv
                         </button>
                       </div>
