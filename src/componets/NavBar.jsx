@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 // react icons
 import { FaXmark, FaBars, FaInstagram, FaFacebookF } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,10 +26,10 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   const navItems = [
-    { link: "Home", path: "home" },
-    { link: "About", path: "about" },
-    { link: "Services", path: "services" },
-    { link: "Contact", path: "contact" },
+    { link: "Home", path: "#" },
+    { link: "About", path: "#" },
+    { link: "Services", path: "#" },
+    { link: "Contact", path: "#" },
   ];
 
   return (
@@ -45,21 +46,21 @@ const NavBar = () => {
       <nav className='py-4 bg-nav-bar lg:px-14 px-4 ${isSticky ? "sticky top-0 right-0 left-0 border-b transition-all bg-gray-4 duration-300 : "" }'>
         <div className="flex justify-between items-center text_base gap-8  border-b-2 border-white ">
           {/* border-b-2 border-black  */}
-          <a
-            href="/"
+          <Link
+            to="/AboutPage"
             className="text-2xl font-semibold flex items-center space-x-3"
           >
-            <span className="text-3xl font-Butler-regular ">
+            <span className="text-3xl font-Butler-regular pl-6 ">
               Danushan Ravendran
             </span>
-          </a>
+          </Link>
           <ul className="md:flex space-x-12 hidden">
             {navItems.map(({ link, path }) => (
               <li
                 key={path}
                 className="block text-base text-black hover:text-gray-1 first:font-medium"
               >
-                <a href={`/${path}`}>{link}</a>
+                <Link to={`/${path}`}>{link}</Link>
               </li>
             ))}
           </ul>
