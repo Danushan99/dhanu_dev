@@ -18,33 +18,3 @@
   font-family: "Butler-Free-Lgt";
   src: url(./assets/fonts/Butler-Free-Lgt.otf);
 }
-.section {
-  @apply pt-24 pb-24;
-}
-
-.section.no-bottom-space {
-  @apply pb-0;
-}
-
-.section.top-space-small {
-  @apply pt-6;
-}
-
-.container {
-  @apply w-full ml-auto mr-auto pl-16 pr-20 max-w-screen-xl mx-auto;
-}
-
-.grid-vertical {
-  @apply grid grid-cols-1 gap-x-12 gap-y-12;
-}
-
-.large-title-row {
-  @apply 
-  
-  grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-12;
-  padding: auto;
-}
-
-.large-title-content {
-  @apply flex justify-center items-center p-4;
-}
