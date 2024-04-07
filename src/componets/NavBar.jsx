@@ -38,7 +38,7 @@ const NavBar = () => {
         isSticky ? "bg-home" : "bg-home"
       } fixed  left-0 right-0`}
     >
-      {" "}
+  
       <div className={`flex justify-between py-2 px-20 bg-cont font-Jost ${isSticky ? "hidden" : "block"}`}>
   <h1>SOFTWARE ENGINEER</h1>
   <h1>TEXT OR TALK • <a href="tel:+94779299587">+94 779299587</a></h1>

@@ -1,5 +1,7 @@
 import React from "react";
-
+import Bidgo from "../assets/bidgo.png";
+import Ebird from "../assets/ebird.png";
+import student from "../assets/student.png";
 import favicon from "../assets/fav.png";
 
 function Projects() {
@@ -39,12 +41,12 @@ function Projects() {
                   </li>
                   <li>
                     {" "}
-                    Technologies used : Flutter,Dart, MySQL, GitHub ,Firebase
+                    Technologies used : Flutter,Dart, MySQL, GitHub 
                   </li>
                 </ul>
               </p>
               <img
-                src="https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
+                src={Bidgo}
                 className="w-full"
                 alt="Article Image"
               />
@@ -53,7 +55,6 @@ function Projects() {
             </div>
           </div>
 
-         
           <div className="hover:bg-primary-1 hover:text-black transition duration-300 max-w-sm rounded overflow-hidden shadow-lg">
             <div className="py-4 px-8">
               <img
@@ -63,7 +64,7 @@ function Projects() {
               />
               <a href="#">
                 <h4 className="text-lg mb-3 font-semibold">
-                  E-Ticky - Ticket Management System For Sliit
+                  E-Bird - Ticket Management System For Sliit
                 </h4>
               </a>
               <p className="mb-2 text-sm text-gray-600">
@@ -74,7 +75,7 @@ function Projects() {
                     management system comprising .NET Web API backend for
                     booking and data management
                   </li>
-                
+
                   <li>
                     {" "}
                     Technologies used : .NET Framework, C, ASP.NET Web API,
@@ -83,7 +84,7 @@ function Projects() {
                 </ul>
               </p>
               <img
-                src="https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
+                src={Ebird}
                 className="w-full"
                 alt="Article Image"
               />
@@ -100,27 +101,22 @@ function Projects() {
               />
               <a href="#">
                 <h4 className="text-lg mb-3 font-semibold">
-                  E-Ticky - Ticket Management System For Sliit
+                  S-Manager -Student Management System
                 </h4>
               </a>
               <p className="mb-2 text-sm text-gray-600">
                 <ul>
+                  <li>Developed a Student Management System Using KOA JS</li>
+
                   <li>
-       
-                    Developed an Enterprise Application For Train ticket
-                    management system comprising .NET Web API backend for
-                    booking and data management
-                  </li>
-          
-                  <li>
-             
-                    Technologies used : .NET Framework, C, ASP.NET Web API,
-                    Java/Kotlin for Android, ReactJs, and RESTful API design.
+                    Built a simple CRUD app , where we can post student details
+                    and retrieve those details in frontend . For this I have
+                    used React JS , Koa JS and Material UI
                   </li>
                 </ul>
               </p>
               <img
-                src="https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
+                src={student}
                 className="w-full"
                 alt="Article Image"
               />
