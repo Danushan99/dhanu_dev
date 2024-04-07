@@ -5,8 +5,8 @@ import React from "react";
 
 function AboutPage() {
   return (
-    <section className="bg-home " id="AboutPage">
-      <div className="grid gap-8 p-20  md:items-center    ">
+    <section className="bg-home " >
+      <div className="grid gap-8 p-20  md:items-center ">
         <div className="flex flex-col justify-center items-center  ">
           <h1 className="mb-2 text-2xl font-Jost font-medium">About Me</h1>
         </div>
