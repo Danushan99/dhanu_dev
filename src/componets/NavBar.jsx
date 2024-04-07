@@ -50,7 +50,7 @@ const NavBar = () => {
             to="/AboutPage"
             className="text-2xl font-semibold flex items-center space-x-3"
           >
-            <span className="text-3xl  font-Butler-Free-Lgt pl-6 ">
+            <span className="text-3xl font-EB-Garamond pl-6 ">
               Danushan Ravendran
             </span>
           </Link>

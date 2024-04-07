@@ -7,7 +7,8 @@ export default {
         "butler-ultra-light": ["Butler", "sans-serif"],
         "Butler-regular": ["Butler", "sans-serif"],
         "Butler-Free-Lgt": ["Butler", "sans-serif"],
-        "Jost": ["Jost", "sans-seri"],
+        "Jost": ["Jost", "sans-serif"],
+        "EB-Garamond":["EB Garamond","sans-serif"]
       },
       colors: {
         "primary-bg": "#edded3",

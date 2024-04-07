@@ -25,7 +25,7 @@ function SliderView() {
                     <p className="text-gray-700  font-Jost  md:font-medium">
                       Wellawatai, Colombo Srilanka
                     </p>
-                    <h2 className="font-bold font-Butler-regular text-3xl md:text-5xl lg:text-6xl">
+                    <h2 className=" font-EB-Garamond  text-3xl md:text-5xl lg:text-6xl">
                       Make your next move your best move.
                     </h2>
                     <div className="w-full flex justify-center mt-20 ">
