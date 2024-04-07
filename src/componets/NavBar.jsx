@@ -38,11 +38,16 @@ const NavBar = () => {
         isSticky ? "bg-home" : "bg-home"
       } fixed  left-0 right-0`}
     >
-  
-      <div className={`flex justify-between py-2 px-20 bg-cont font-Jost ${isSticky ? "hidden" : "block"}`}>
-  <h1>SOFTWARE ENGINEER</h1>
-  <h1>TEXT OR TALK • <a href="tel:+94779299587">+94 779299587</a></h1>
-</div>
+      <div
+        className={`flex justify-between py-2 px-20 bg-cont font-Jost ${
+          isSticky ? "hidden" : "block"
+        }`}
+      >
+        <h1>SOFTWARE ENGINEER</h1>
+        <h1>
+          TEXT OR TALK • <a href="tel:+94779299587">+94 779299587</a>
+        </h1>
+      </div>
       <nav className='py-4 bg-nav-bar lg:px-14 px-4 ${isSticky ? "sticky top-0 right-0 left-0 border-b transition-all bg-gray-4 duration-300 : "" }'>
         <div className="flex justify-between items-center text_base gap-8  border-b-2 border-white ">
           {/* border-b-2 border-black  */}
