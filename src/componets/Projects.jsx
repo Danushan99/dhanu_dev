@@ -21,7 +21,7 @@ function Projects() {
                 className="rounded-full h-12 w-12 mb-4"
                 alt="Profile Picture"
               />
-              <a href="">
+              <a href="https://gitlab.com/Codevita_pvt_ltd/accelero_logistics_customer_mobileapp">
                 <h4 className="text-lg mb-3 font-semibold">
                   BidGo - Ride-hailing service Application
                 </h4>
@@ -62,7 +62,7 @@ function Projects() {
                 className="rounded-full h-12 w-12 mb-4"
                 alt="Profile Picture"
               />
-              <a href="">
+              <a href="https://github.com/Danushan99/Ead_Web_Api">
                 <h4 className="text-lg mb-3 font-semibold">
                   E-Bird - Ticket Management System For Sliit
                 </h4>
@@ -99,7 +99,7 @@ function Projects() {
                 className="rounded-full h-12 w-12 mb-4"
                 alt="Profile Picture"
               />
-              <a href="">
+              <a href="https://github.com/Danushan99/Assignment_frontend">
                 <h4 className="text-lg mb-3 font-semibold">
                   S-Manager -Student Management System
                 </h4>
