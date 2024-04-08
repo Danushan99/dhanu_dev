@@ -76,8 +76,8 @@ const NavBar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="text-black bg-transparent  duration-150">
-                <FaInstagram className="w-7 h-7" />
+              <button className="text-black bg-transparent  hover:text-gray-100 duration-150">
+                <FaInstagram className="w-6 h-6" />
               </button>
             </a>
             <a
@@ -86,7 +86,7 @@ const NavBar = () => {
               rel="noopener noreferrer"
             >
               <button className="text-black  hover:text-gray-100 font-bold text-xl outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
-                <FaFacebookF className="w-7 h-7" />
+                <FaFacebookF className="w-6 h-6" />
               </button>
             </a>
           </div>
