@@ -17,18 +17,19 @@ function Portfolio() {
           <img   src={myImage} />
         </div>
         <div className="lg:flex-[60%] bg-[#ECDDD3] lg:py-0 py-[96px] justify-center flex p-4">
-          <div className="flex justify-center flex-col text-center items-center h-full gap-10  text-center">
+          <div className="flex justify-center flex-col text-center items-center h-full gap-10 ">
             <div className="text-[14px]  font-Jostfont-bold">
             WELLAWATAI, COLOMBO SRILANKA
             </div>
             <div className="sm:text-[58px] text-[36px] font-Butler-Free-Lgt leading-[60px]">
             Make your next move your best move.
-   
+
             </div>
             <div className="flex sm:flex-row flex-col gap-4">
-              <button className="border-[1px] border-black py-[17px] px-[36px] text-[14px] font-bold hover:bg-gray-1 hover:text-[#ECDDD3]">
+              {/* <button className="border-[1px] border-black py-[17px] px-[36px] text-[14px] font-bold hover:bg-gray-1 hover:text-[#ECDDD3]">
               Hire Me
-              </button>
+              </button> */}
+              <a href="mailto:Danuthasan008@gmail.com" className="border-[1px] border-black py-[17px] px-[36px] text-[14px] font-bold hover:bg-gray-1 hover:text-[#ECDDD3]">      Hire Me</a>
               <button className="border-[1px] border-black py-[17px] px-[36px] text-[14px] font-bold bg-gray-1 hover:bg-transparent text-white hover:text-black"   onClick={navigateToUrl}>
               Download Cv
               </button>
