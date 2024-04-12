@@ -39,17 +39,10 @@ function Projects() {
                     UI development and API integration for optimized user
                     experience.
                   </li>
-                  <li>
-                    {" "}
-                    Technologies used : Flutter,Dart, MySQL, GitHub 
-                  </li>
+                  <li> Technologies used : Flutter,Dart, MySQL, GitHub</li>
                 </ul>
               </p>
-              <img
-                src={Bidgo}
-                className="w-full"
-                alt="Article Image"
-              />
+              <img src={Bidgo} className="w-full" alt="Article Image" />
               <hr className="mt-4" />
               &nbsp;<span className="text-xs text-gray-500">PROJECTS</span>
             </div>
@@ -83,11 +76,7 @@ function Projects() {
                   </li>
                 </ul>
               </p>
-              <img
-                src={Ebird}
-                className="w-full"
-                alt="Article Image"
-              />
+              <img src={Ebird} className="w-full" alt="Article Image" />
               <hr className="mt-4" />
               &nbsp;<span className="text-xs text-gray-500">Projects</span>
             </div>
@@ -115,11 +104,7 @@ function Projects() {
                   </li>
                 </ul>
               </p>
-              <img
-                src={student}
-                className="w-full"
-                alt="Article Image"
-              />
+              <img src={student} className="w-full" alt="Article Image" />
               <hr className="mt-4" />
               &nbsp;<span className="text-xs text-gray-500">Projects</span>
             </div>
