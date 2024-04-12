@@ -21,7 +21,7 @@ function Projects() {
                 className="rounded-full h-12 w-12 mb-4"
                 alt="Profile Picture"
               />
-              <a href="">
+              <a href="https://gitlab.com/Codevita_pvt_ltd/accelero_logistics_customer_mobileapp">
                 <h4 className="text-lg mb-3 font-semibold">
                   BidGo - Ride-hailing service Application
                 </h4>
@@ -39,17 +39,10 @@ function Projects() {
                     UI development and API integration for optimized user
                     experience.
                   </li>
-                  <li>
-                    {" "}
-                    Technologies used : Flutter,Dart, MySQL, GitHub 
-                  </li>
+                  <li> Technologies used : Flutter,Dart, MySQL, GitHub</li>
                 </ul>
               </p>
-              <img
-                src={Bidgo}
-                className="w-full"
-                alt="Article Image"
-              />
+              <img src={Bidgo} className="w-full" alt="Article Image" />
               <hr className="mt-4" />
               &nbsp;<span className="text-xs text-gray-500">PROJECTS</span>
             </div>
@@ -62,7 +55,7 @@ function Projects() {
                 className="rounded-full h-12 w-12 mb-4"
                 alt="Profile Picture"
               />
-              <a href="">
+              <a href="https://github.com/Danushan99/Ead_Web_Api">
                 <h4 className="text-lg mb-3 font-semibold">
                   E-Bird - Ticket Management System For Sliit
                 </h4>
@@ -83,11 +76,7 @@ function Projects() {
                   </li>
                 </ul>
               </p>
-              <img
-                src={Ebird}
-                className="w-full"
-                alt="Article Image"
-              />
+              <img src={Ebird} className="w-full" alt="Article Image" />
               <hr className="mt-4" />
               &nbsp;<span className="text-xs text-gray-500">Projects</span>
             </div>
@@ -99,7 +88,7 @@ function Projects() {
                 className="rounded-full h-12 w-12 mb-4"
                 alt="Profile Picture"
               />
-              <a href="">
+              <a href="https://github.com/Danushan99/Assignment_frontend">
                 <h4 className="text-lg mb-3 font-semibold">
                   S-Manager -Student Management System
                 </h4>
@@ -115,11 +104,7 @@ function Projects() {
                   </li>
                 </ul>
               </p>
-              <img
-                src={student}
-                className="w-full"
-                alt="Article Image"
-              />
+              <img src={student} className="w-full" alt="Article Image" />
               <hr className="mt-4" />
               &nbsp;<span className="text-xs text-gray-500">Projects</span>
             </div>
