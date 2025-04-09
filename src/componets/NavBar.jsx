@@ -29,7 +29,7 @@ const NavBar = () => {
     { link: "Home", path: "#" },
     { link: "About", path: "#" },
     { link: "Services", path: "#" },
-    { link: "Contact", path: "#" },
+    { link: "Contact ", path: "#" },
   ];
 
   return (
