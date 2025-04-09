@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// react icons
 import { FaXmark, FaBars, FaInstagram, FaFacebookF } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
