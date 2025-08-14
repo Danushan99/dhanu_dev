@@ -1,11 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-
-
-import React from "react";
-
-
-
-
 function AboutPage() {
   const skills = [
     "Flutter", "Dart", "React", "Firebase", "FastAPI", "NodeJS", "Python", "Tailwind CSS"
@@ -30,7 +23,7 @@ function AboutPage() {
             About Me
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            Hello! I'm <span className="font-semibold">Danushan Ravendran</span>, a passionate Software Engineer and Flutter Developer from Nugegoda, Sri Lanka. I focus on creating scalable, user-focused applications with an emphasis on modern UI/UX design.
+            Hello! I'm <span className="font-semibold">Danushan Ravendran</span>, a passionate Software Engineer and Flutter Developer from , Sri Lanka. I focus on creating scalable, user-focused applications with an emphasis on modern UI/UX design.
           </p>
         </div>
 

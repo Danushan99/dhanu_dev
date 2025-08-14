@@ -1,11 +1,10 @@
-import React from "react";
 import NavBar from "./NavBar";
 import AboutPage from "./About";
-
-
-import Top from "./Projects";
+import Experience from "./Experience";
+import Top from "./Projects"; // ensure filename matches
 import Footer from "./Footer";
 import Portfolio from "./Portfolio";
+
 
 const HomePage = () => {
   return (
@@ -13,6 +12,7 @@ const HomePage = () => {
       <NavBar />
       <Portfolio />
       <AboutPage />
+       <Experience />
       <Top/>
       <Footer/>
   </div>

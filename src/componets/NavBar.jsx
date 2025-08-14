@@ -28,7 +28,7 @@ const NavBar = () => {
   ];
 
   return (
-    <div className={`w-full fixed top-0 left-0 right-0 z-50 ${isSticky ? "shadow-md bg-home" : "bg-home"}`}>
+    <div className={`w-full fixed top-0 left-0 right-0 z-50 ${isSticky ? "shadow-md bg-transparent" : "bg-transparent"}`}>
       {/* Top Info Bar */}
       <div className={`flex justify-between py-2 px-20 font-Jost ${isSticky ? "hidden" : "block"}`}>
         <h1>SOFTWARE ENGINEER</h1>
@@ -38,7 +38,7 @@ const NavBar = () => {
       </div>
 
       {/* Main Nav */}
-      <nav className="py-4 bg-nav-bar lg:px-14 px-4">
+      <nav className="py-4 bg-transparent lg:px-14 px-4">
         <div className="flex justify-between items-center gap-8 border-b-2 border-white">
           <Link to="/" className="text-2xl font-semibold flex items-center space-x-3">
             <span className="text-3xl font-EB-Garamond pl-6">Danushan Ravendran</span>
