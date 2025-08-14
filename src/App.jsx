@@ -2,6 +2,7 @@ import "./App.css";
 import AboutPage from "./componets/About";
 import HomePage from "./componets/HomePage";
 import NavBar from "./componets/NavBar";
+import Services from "./componets/ services";
 import {
   BrowserRouter as Router,
   Route,
@@ -13,6 +14,8 @@ function App() {
   <Routes>
   <Route path="/" element={<HomePage/>} />
   <Route path="/AboutPage" element={<AboutPage/>} />
+  <Route path="/Services" element={<Services />} />
+
   </Routes>
 </Router>
 </>
