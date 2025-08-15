@@ -1,86 +1,132 @@
 /* eslint-disable react/no-unescaped-entities */
+import { motion } from "framer-motion";
+import { FaReact, FaNodeJs, FaPython, FaAws, FaGithub } from "react-icons/fa";
+import {
+  SiFlutter,
+  SiDart,
+  SiFirebase,
+  SiFastapi,
+  SiTailwindcss,
+  SiPostgresql,
+  SiMongodb,
+} from "react-icons/si";
+
 function AboutPage() {
   const skills = [
-    "Flutter", "Dart", "React", "Firebase", "FastAPI", "NodeJS", "Python", "Tailwind CSS"
-  ];
-
-  const softSkills = [
-    "Communication", "Teamwork", "Problem-solving", "Adaptability", "Time Management"
+    { name: "Flutter", icon: <SiFlutter size={24} /> },
+    { name: "Dart", icon: <SiDart size={24} /> },
+    { name: "React", icon: <FaReact size={24} /> },
+    { name: "Firebase", icon: <SiFirebase size={24} /> },
+    { name: "FastAPI", icon: <SiFastapi size={24} /> },
+    { name: "NodeJS", icon: <FaNodeJs size={24} /> },
+    { name: "Python", icon: <FaPython size={24} /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss size={24} /> },
+    { name: "PostgreSQL", icon: <SiPostgresql size={24} /> },
+    { name: "MongoDB", icon: <SiMongodb size={24} /> },
+    { name: "AWS", icon: <FaAws size={24} /> },
+    { name: "GitHub", icon: <FaGithub size={24} /> },
   ];
 
   const experienceHighlights = [
     "2+ years of experience in mobile and web app development",
-    "Built scalable Flutter apps with Firebase backend",
-    "Strong background in UI/UX design and API integrations",
-    "Delivered production-grade apps for clients and internal projects"
+    "Spearheaded YaraPay – Flutter-based payments portal",
+    "Full-stack development with Flutter, Firebase, FastAPI",
+    "Worked with AWS, GCP, REST APIs, and UI/UX improvements",
+    "Delivered production-grade apps for SMEs and large clients",
   ];
 
   return (
-    <section className="bg-gray-50 py-16 px-6 md:px-20">
+    <section className="bg-gradient-to-b from-gray-50 to-gray-100 py-16 px-6 md:px-20">
       <div className="max-w-6xl mx-auto grid gap-12">
-        <div className="text-center md:text-left">
-          <h2 className="text-4xl font-EB-Garamond font-semibold mb-4 text-gray-800">
-            About Me
-          </h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            Hello! I'm <span className="font-semibold">Danushan Ravendran</span>, a passionate Software Engineer and Flutter Developer from , Sri Lanka. I focus on creating scalable, user-focused applications with an emphasis on modern UI/UX design.
+        {/* Intro */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+          <h2 className="text-4xl font-bold mb-4 text-gray-800">About Me</h2>
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            Hello! I'm{" "}
+            <span className="font-semibold text-blue-600">
+              Danushan Ravendran
+            </span>
+            , a passionate Software Engineer and Flutter Developer from
+            Nugegoda, Sri Lanka. I specialize in creating scalable,
+            user-focused mobile and web applications with an emphasis on modern
+            UI/UX design, backend integration, and cloud deployment.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Experience Highlights */}
-        <div className="bg-white shadow-lg rounded-xl p-8">
-          <h3 className="text-2xl font-medium text-gray-800 mb-4">Experience Highlights</h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+        {/* Experience */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-white shadow-lg rounded-xl p-8"
+        >
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+            Experience Highlights
+          </h3>
+          <ul className="space-y-3 text-gray-700">
             {experienceHighlights.map((item, index) => (
-              <li key={index}>{item}</li>
+              <li key={index} className="flex items-start gap-3">
+                <span className="text-blue-500 mt-1">•</span>
+                {item}
+              </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
-        {/* Technical Skills */}
-        <div className="bg-white shadow-lg rounded-xl p-8">
-          <h3 className="text-2xl font-medium text-gray-800 mb-4">Technical Skills</h3>
-          <div className="flex flex-wrap gap-3">
-            {skills.map((skill) => (
-              <span key={skill} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                {skill}
-              </span>
+        {/* Skills */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-white shadow-lg rounded-xl p-8"
+        >
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+            Technical Skills
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {skills.map((skill, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-3 bg-gray-50 p-3 rounded-lg shadow-sm"
+              >
+                <span className="text-blue-500">{skill.icon}</span>
+                <span className="font-medium text-gray-700">{skill.name}</span>
+              </motion.div>
             ))}
           </div>
-        </div>
-
-        {/* Soft Skills */}
-        <div className="bg-white shadow-lg rounded-xl p-8">
-          <h3 className="text-2xl font-medium text-gray-800 mb-4">Soft Skills</h3>
-          <div className="flex flex-wrap gap-3">
-            {softSkills.map((skill) => (
-              <span key={skill} className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center rounded-xl py-8 px-6">
-          <h3 className="text-2xl font-semibold mb-4">Let's Build Something Amazing</h3>
-          <p className="mb-6">I’m open to new opportunities and collaborations in web and mobile development. Feel free to reach out!</p>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center rounded-xl py-10 px-6 shadow-lg"
+        >
+          <h3 className="text-3xl font-semibold mb-4">
+            Let's Build Something Amazing
+          </h3>
+          <p className="mb-6 max-w-xl mx-auto">
+            I’m open to new opportunities and collaborations in web and mobile
+            development. Whether it's building a startup MVP or enhancing an
+            enterprise solution, let's make it happen!
+          </p>
           <a
-            href="mailto:Danuthasan008@gmail.com"
+            href="mailto:danuthasan08@gmail.com"
             className="bg-white text-blue-600 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
           >
             Contact Me
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 }
 
-
-
-
 export default AboutPage;
-
-
-
