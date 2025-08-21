@@ -13,98 +13,82 @@ import {
 
 function AboutPage() {
   const skills = [
-    { name: "Flutter", icon: <SiFlutter size={28} /> },
-    { name: "Dart", icon: <SiDart size={28} /> },
-    { name: "React", icon: <FaReact size={28} /> },
-    { name: "Firebase", icon: <SiFirebase size={28} /> },
-    { name: "FastAPI", icon: <SiFastapi size={28} /> },
-    { name: "NodeJS", icon: <FaNodeJs size={28} /> },
-    { name: "Python", icon: <FaPython size={28} /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss size={28} /> },
-    { name: "PostgreSQL", icon: <SiPostgresql size={28} /> },
-    { name: "MongoDB", icon: <SiMongodb size={28} /> },
-    { name: "AWS", icon: <FaAws size={28} /> },
-    { name: "GitHub", icon: <FaGithub size={28} /> },
+    { name: "Flutter", icon: <SiFlutter size={26} /> },
+    { name: "Dart", icon: <SiDart size={26} /> },
+    { name: "React", icon: <FaReact size={26} /> },
+    { name: "Firebase", icon: <SiFirebase size={26} /> },
+    { name: "FastAPI", icon: <SiFastapi size={26} /> },
+    { name: "Node.js", icon: <FaNodeJs size={26} /> },
+    { name: "Python", icon: <FaPython size={26} /> },
+    { name: "Tailwind", icon: <SiTailwindcss size={26} /> },
+    { name: "PostgreSQL", icon: <SiPostgresql size={26} /> },
+    { name: "MongoDB", icon: <SiMongodb size={26} /> },
+    { name: "AWS", icon: <FaAws size={26} /> },
+    { name: "GitHub", icon: <FaGithub size={26} /> },
   ];
 
-  const experienceHighlights = [
-    "2+ years of experience in mobile and web app development",
-    "Spearheaded YaraPay – Flutter-based payments portal",
-    "Full-stack development with Flutter, Firebase, FastAPI",
-    "Worked with AWS, GCP, REST APIs, and UI/UX improvements",
-    "Delivered production-grade apps for SMEs and large clients",
+  const highlights = [
+    "2+ years of professional experience in software development",
+    "Led development of YaraPay, a Flutter-based payments platform",
+    "Built full-stack apps using Flutter, Firebase, and FastAPI",
+    "Worked extensively with AWS, GCP, REST APIs, and CI/CD pipelines",
+    "Delivered scalable, production-ready apps for startups and enterprises",
   ];
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.12, duration: 0.6, ease: "easeOut" },
+    }),
+  };
 
   return (
-    <section className="bg-gradient-to-b from-white to-blue-50 py-20 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto space-y-16">
+    <section className="bg-white py-20 px-6 md:px-16">
+      <div className="max-w-5xl mx-auto space-y-24">
         
-        {/* Intro Section */}
+        {/* Intro */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="bg-white shadow-lg rounded-3xl p-10 text-center border border-gray-100"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="text-center space-y-6"
         >
-          <h2 className="text-5xl font-extrabold text-gray-800 mb-6">
-            About Me
-          </h2>
-          <p className="text-lg leading-relaxed max-w-3xl mx-auto text-gray-600">
-            Hello! I'm{" "}
+          <h2 className="text-5xl font-extrabold text-gray-900">About Me</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            I'm{" "}
             <span className="font-semibold text-blue-600">
               Danushan Ravendran
             </span>
-            , a passionate Software Engineer and Flutter Developer from
-            Nugegoda, Sri Lanka. I specialize in creating scalable,
-            user-focused mobile and web applications with an emphasis on modern
-            UI/UX design, backend integration, and cloud deployment.
+            , a Software Engineer and Flutter Developer based in Sri Lanka.  
+            I design and build modern mobile & web applications that are{" "}
+            <span className="text-gray-900 font-medium">fast, scalable, and user-centric</span>.  
+            My work combines clean UI/UX design with strong backend integration 
+            and cloud deployment practices.
           </p>
         </motion.div>
 
-        {/* Experience Highlights */}
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="bg-white shadow-lg rounded-3xl p-8 border border-gray-100"
-        >
-          <h3 className="text-3xl font-bold text-blue-600 mb-6">
-            Experience Highlights
-          </h3>
-          <ul className="space-y-4 text-gray-700">
-            {experienceHighlights.map((item, index) => (
-              <li
-                key={index}
-                className="flex items-start gap-3 hover:text-blue-500 transition"
-              >
-                <span className="text-blue-500 mt-1">•</span>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
 
-        {/* Skills Grid */}
+        {/* Skills */}
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="bg-white shadow-lg rounded-3xl p-8 border border-gray-100"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="space-y-8"
         >
-          <h3 className="text-3xl font-bold text-blue-600 mb-6">
-            Technical Skills
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-            {skills.map((skill, index) => (
+          <h3 className="text-3xl font-bold text-gray-900">Technical Skills</h3>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8">
+            {skills.map((skill, i) => (
               <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-md border border-blue-100 hover:shadow-lg transition"
+                key={i}
+                custom={i}
+                variants={fadeUp}
+                whileHover={{ scale: 1.1, rotate: 2 }}
+                className="flex flex-col items-center text-gray-600 hover:text-blue-600 transition"
               >
-                <span className="text-blue-600">{skill.icon}</span>
-                <span className="text-gray-800 font-medium text-sm">
-                  {skill.name}
-                </span>
+                {skill.icon}
+                <span className="text-sm mt-2">{skill.name}</span>
               </motion.div>
             ))}
           </div>
@@ -112,21 +96,22 @@ function AboutPage() {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="text-center py-12 px-8 rounded-3xl bg-gradient-to-r from-blue-500 to-indigo-600 shadow-xl text-white"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="text-center space-y-6"
         >
-          <h3 className="text-4xl font-bold mb-4">
-            Let's Build Something Amazing
+          <h3 className="text-4xl font-bold text-gray-900">
+            Let's Build Something Great
           </h3>
-          <p className="max-w-2xl mx-auto text-lg mb-6">
-            Open to new opportunities and collaborations in web and mobile
-            development. Let's create something impactful together!
+          <p className="text-gray-600 max-w-xl mx-auto">
+            I'm open to new opportunities in web and mobile development.  
+            Whether it's building products from scratch or scaling existing systems,  
+            I love solving problems with clean code and thoughtful design.
           </p>
           <a
             href="mailto:danuthasan08@gmail.com"
-            className="bg-white text-blue-600 font-bold px-8 py-3 rounded-lg hover:bg-gray-100 transition"
+            className="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition"
           >
             Contact Me
           </a>

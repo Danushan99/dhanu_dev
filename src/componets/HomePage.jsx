@@ -4,6 +4,7 @@ import Experience from "./Experience";
 import Top from "./Projects"; // ensure filename matches
 import Footer from "./Footer";
 import Portfolio from "./Portfolio";
+import DevelopmentProcess from "./DevelopmentProcess";
 
 
 const HomePage = () => {
@@ -11,6 +12,7 @@ const HomePage = () => {
     <div className="bg-Home">
       <NavBar />
       <Portfolio />
+      <DevelopmentProcess />
       <AboutPage />
        <Experience />
       <Top/>
