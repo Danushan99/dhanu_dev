@@ -1,5 +1,8 @@
 import React from "react";
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { FaBriefcase } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -43,42 +46,54 @@ const AnimatedExperience = () => {
   return (
     <section className="bg-gray-50 py-24">
       <div className="max-w-6xl mx-auto px-6">
-        <motion.h1
-          className="text-4xl font-EB-Garamond font-bold text-center mb-16"
-          initial={{ opacity: 0, y: -50 }}
+        {/* Section Title */}
+        <motion.h2
+          className="text-4xl md:text-5xl font-EB-Garamond font-bold text-center mb-16 text-gray-900"
+          initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           My Work Experience
-        </motion.h1>
+        </motion.h2>
 
-        <VerticalTimeline lineColor="#000000">
+        {/* Timeline */}
+        <VerticalTimeline lineColor="#111">
           {experiences.map((exp, index) => (
             <VerticalTimelineElement
               key={index}
               contentStyle={{
-                background: "#FFFFFF",
-                color: "#000000",
-                borderRadius: "12px",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-                padding: "20px",
+                background: "#fff",
+                color: "#111",
+                borderRadius: "16px",
+                boxShadow: "0 6px 24px rgba(0,0,0,0.08)",
+                padding: "24px",
               }}
-              contentArrowStyle={{ borderRight: "7px solid #FFFFFF" }}
+              contentArrowStyle={{ borderRight: "7px solid #fff" }}
               date={exp.period}
-              iconStyle={{ background: "#000000", color: "#FFFFFF" }}
+              dateClassName="text-gray-500 font-medium"
+              iconStyle={{
+                background: "#111",
+                color: "#fff",
+                boxShadow: "0 0 0 4px #e5e7eb", // subtle ring effect
+              }}
               icon={<FaBriefcase />}
             >
+              {/* Animated Card Content */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
               >
-                <h3 className="text-xl font-semibold mb-1">{exp.role}</h3>
-                <h4 className="text-gray-700 mb-2">
-                  {exp.company} - {exp.location}
+                <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                  {exp.role}
+                </h3>
+                <h4 className="text-md text-gray-700 mb-3">
+                  {exp.company} — <span className="italic">{exp.location}</span>
                 </h4>
-                <p className="text-gray-800">{exp.description}</p>
+                <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                  {exp.description}
+                </p>
               </motion.div>
             </VerticalTimelineElement>
           ))}
