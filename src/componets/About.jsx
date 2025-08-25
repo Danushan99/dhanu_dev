@@ -27,22 +27,15 @@ function AboutPage() {
     { name: "GitHub", icon: <FaGithub size={26} /> },
   ];
 
-  const highlights = [
-    "2+ years of professional experience in software development",
-    "Led development of YaraPay, a Flutter-based payments platform",
-    "Built full-stack apps using Flutter, Firebase, and FastAPI",
-    "Worked extensively with AWS, GCP, REST APIs, and CI/CD pipelines",
-    "Delivered scalable, production-ready apps for startups and enterprises",
-  ];
-
   const fadeUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: i * 0.12, duration: 0.6, ease: "easeOut" },
-    }),
-  };
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.12, duration: 0.6, ease: "easeOut" },
+  }),
+};
+
 
   return (
     <section className="bg-white py-20 px-6 md:px-16">
@@ -51,40 +44,44 @@ function AboutPage() {
         {/* Intro */}
         <motion.div
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
           variants={fadeUp}
           className="text-center space-y-6"
         >
           <h2 className="text-5xl font-extrabold text-gray-900">About Me</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             I'm{" "}
-            <span className="font-semibold text-blue-600">
+            <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
               Danushan Ravendran
             </span>
             , a Software Engineer and Flutter Developer based in Sri Lanka.  
             I design and build modern mobile & web applications that are{" "}
-            <span className="text-gray-900 font-medium">fast, scalable, and user-centric</span>.  
+            <span className="font-semibold text-gray-900">
+              fast, scalable, and user-centric
+            </span>.  
             My work combines clean UI/UX design with strong backend integration 
             and cloud deployment practices.
           </p>
         </motion.div>
 
-
         {/* Skills */}
         <motion.div
           initial="hidden"
-          animate="visible"
-          variants={fadeUp}
+          whileInView="visible"
+          viewport={{ once: true }}
           className="space-y-8"
         >
-          <h3 className="text-3xl font-bold text-gray-900">Technical Skills</h3>
+          <h3 className="text-3xl font-bold text-gray-900 text-center">
+            Technical Skills
+          </h3>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8">
             {skills.map((skill, i) => (
               <motion.div
                 key={i}
                 custom={i}
                 variants={fadeUp}
-                whileHover={{ scale: 1.1, rotate: 2 }}
+                whileHover={{ scale: 1.15, rotate: 2 }}
                 className="flex flex-col items-center text-gray-600 hover:text-blue-600 transition"
               >
                 {skill.icon}
@@ -97,7 +94,8 @@ function AboutPage() {
         {/* Call to Action */}
         <motion.div
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
           variants={fadeUp}
           className="text-center space-y-6"
         >
@@ -109,12 +107,14 @@ function AboutPage() {
             Whether it's building products from scratch or scaling existing systems,  
             I love solving problems with clean code and thoughtful design.
           </p>
-          <a
+          <motion.a
+            whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(0,0,0,0.15)" }}
+            whileTap={{ scale: 0.97 }}
             href="mailto:danuthasan08@gmail.com"
             className="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition"
           >
             Contact Me
-          </a>
+          </motion.a>
         </motion.div>
       </div>
     </section>

@@ -20,12 +20,12 @@ export default function HeroSection() {
 						</h1>
 						<h2 className="text-2xl md:text-4xl font-bold text-gray-900">Full Stack Developer</h2>
 						<p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-							I craft end-to-end solutions with 8+ years of experience building scalable applications and leading development teams.
+							a Software Engineer and Flutter Developer based in Sri Lanka. I design and build modern mobile & web applications that are user-centric
 						</p>
-						<p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
+						{/* <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
 							Previously Senior Full Stack Developer at <span className="text-blue-600">Stripe</span> and Tech Lead at{' '}
 							<span className="text-purple-600">Vercel</span>
-						</p>
+						</p> */}
 					</div>
 					<div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
 						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-blue-100 rounded-full text-blue-600 text-xs md:text-sm">TypeScript</span>
@@ -35,7 +35,6 @@ export default function HeroSection() {
 						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-purple-100 rounded-full text-purple-600 text-xs md:text-sm">AWS</span>
 					</div>
 				</motion.div>
-
 				{/* Interactive System Architecture */}
 				<div className="w-full max-w-5xl mx-auto relative px-2 md:px-4">
 					<motion.div

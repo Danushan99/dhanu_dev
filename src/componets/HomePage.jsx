@@ -14,17 +14,16 @@ import { ProjectsSection } from "./ProjectsSection";
 const HomePage = () => {
   return (
     <div className="bg-Home">
-      {/* <NavBar /> */}
-      {/* <Portfolio /> */}
+      {/* <NavBar />
+      <Portfolio /> */}
       <HeroSection />
       <DevelopmentProcess />
       <AboutPage />
-      <Experience />
+      {/* <Experience /> */}
       <SkillsSection />
       {/* <Top/> */}
-      <ExperienceSection /> 
+      <ExperienceSection />
       <ProjectsSection />
-
 
       <ContactSection />
 
