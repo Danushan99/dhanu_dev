@@ -11,9 +11,9 @@ export default {
         "EB-Garamond":["EB Garamond","sans-serif"]
       },
       colors: {
-        "primary-bg": "#edded3",
+        "primary-bg": "#ffffffff",
         "primary-ash": "#72855d",
-        "Home": "#F1EFE9",
+        "Home": "#ffffffff",
         "gray-4": "#f2efea",
         "gray-1": "#2c2d36",
         "primary-1": "#edded3",
