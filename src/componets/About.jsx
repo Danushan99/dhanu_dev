@@ -28,19 +28,17 @@ function AboutPage() {
   ];
 
   const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.12, duration: 0.6, ease: "easeOut" },
-  }),
-};
-
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.12, duration: 0.6, ease: "easeOut" },
+    }),
+  };
 
   return (
     <section className="bg-white py-20 px-6 md:px-16">
       <div className="max-w-5xl mx-auto space-y-24">
-        
         {/* Intro */}
         <motion.div
           initial="hidden"
@@ -55,13 +53,13 @@ function AboutPage() {
             <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
               Danushan Ravendran
             </span>
-            , a Software Engineer and Flutter Developer based in Sri Lanka.  
-            I design and build modern mobile & web applications that are{" "}
+            , a Software Engineer and Flutter Developer based in Sri Lanka. I
+            design and build modern mobile & web applications that are{" "}
             <span className="font-semibold text-gray-900">
               fast, scalable, and user-centric
-            </span>.  
-            My work combines clean UI/UX design with strong backend integration 
-            and cloud deployment practices.
+            </span>
+            . My work combines clean UI/UX design with strong backend
+            integration and cloud deployment practices.
           </p>
         </motion.div>
 
@@ -97,18 +95,21 @@ function AboutPage() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeUp}
-          className="text-center space-y-6"
+          className="text-center space-y-6 bg-blue-100 p-10 rounded-2xl"
         >
           <h3 className="text-4xl font-bold text-gray-900">
             Let's Build Something Great
           </h3>
           <p className="text-gray-600 max-w-xl mx-auto">
-            I'm open to new opportunities in web and mobile development.  
-            Whether it's building products from scratch or scaling existing systems,  
-            I love solving problems with clean code and thoughtful design.
+            I'm open to new opportunities in web and mobile development. Whether
+            it's building products from scratch or scaling existing systems, I
+            love solving problems with clean code and thoughtful design.
           </p>
           <motion.a
-            whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(0,0,0,0.15)" }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 8px 20px rgba(0,0,0,0.15)",
+            }}
             whileTap={{ scale: 0.97 }}
             href="mailto:danuthasan08@gmail.com"
             className="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition"
