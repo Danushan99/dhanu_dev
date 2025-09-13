@@ -20,10 +20,10 @@ const HomePage = () => {
       <DevelopmentProcess />
       <AboutPage />
       {/* <Experience /> */}
-      <SkillsSection />
+      {/* <SkillsSection /> */}
       {/* <Top/> */}
       <ExperienceSection />
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
 
       <ContactSection />
 
