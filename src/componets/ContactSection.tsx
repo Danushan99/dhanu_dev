@@ -25,13 +25,13 @@ const ContactSection = () => {
 							/>
 							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
 						</svg>
-						<span>San Francisco, CA</span>
+						<span>Colombo, Srilanka</span>
 					</div>
 
 					{/* Contact Buttons */}
 					<div className="flex flex-col sm:flex-row justify-center gap-4">
 						<a
-							href="mailto:david@example.com"
+							href="mailto:danuthasan08@gmail.com"
 							className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2 shadow-lg shadow-purple-500/20"
 						>
 							<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -41,7 +41,7 @@ const ContactSection = () => {
 							Get in Touch
 						</a>
 						<a
-							href="/resume.pdf"
+							href="https://drive.google.com/file/d/1PCWOe9wvJEasN_-k2dB_nkJFNsanypZp/view?usp=sharing"
 							target="_blank"
 							className="px-8 py-3 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-gray-200 transition-colors inline-flex items-center justify-center gap-2 border border-gray-200"
 						>
@@ -60,7 +60,7 @@ const ContactSection = () => {
 					{/* Social Links */}
 					<div className="flex justify-center gap-6">
 						<a
-							href="https://github.com"
+							href="https://github.com/Danushan99"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-gray-600 hover:text-gray-900 transition-colors p-2 hover:bg-gray-100 rounded-full"
@@ -70,7 +70,7 @@ const ContactSection = () => {
 							</svg>
 						</a>
 						<a
-							href="https://linkedin.com"
+							href="https://www.linkedin.com/in/danushan-r/"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-gray-600 hover:text-gray-900 transition-colors p-2 hover:bg-gray-100 rounded-full"
@@ -80,7 +80,7 @@ const ContactSection = () => {
 							</svg>
 						</a>
 						<a
-							href="https://twitter.com"
+							href="#"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-gray-600 hover:text-gray-900 transition-colors p-2 hover:bg-gray-100 rounded-full"
