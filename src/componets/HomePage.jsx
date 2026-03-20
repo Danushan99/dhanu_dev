@@ -1,33 +1,35 @@
 import NavBar from "./NavBar";
-import AboutPage from "./About";
-import Experience from "./Experience";
-import Top from "./Projects"; // ensure filename matches
-import Footer from "./Footer";
 import Portfolio from "./Portfolio";
-import DevelopmentProcess from "./DevelopmentProcess";
-import SkillsSection from "./SkillsSection";
-import ContactSection from "./ContactSection";
-import ExperienceSection from "./ExperienceSection";
 import HeroSection from "./HeroSection";
-import { ProjectsSection } from "./ProjectsSection";
+import DevelopmentProcess from "./DevelopmentProcess";
+import AboutPage from "./About";
+import ExperienceSection from "./ExperienceSection";
+import StatsCounter from "./StatsCounter";
+import ProjectsSection from "./ProjectsSection";
+import ContactSection from "./ContactSection";
+import Footer from "./Footer";
+import CursorTrail from "./CursorTrail";
 
 const HomePage = () => {
   return (
     <div className="bg-Home">
-      {/* <NavBar />
-      <Portfolio /> */}
+      <CursorTrail />
+      <NavBar />
+      <section id="hero">
+        <Portfolio />
+      </section>
       <HeroSection />
       <DevelopmentProcess />
-      <AboutPage />
-      {/* <Experience /> */}
-      {/* <SkillsSection /> */}
-      {/* <Top/> */}
+      <section id="about">
+        <AboutPage />
+      </section>
       <ExperienceSection />
-      {/* <ProjectsSection /> */}
-
+      <StatsCounter />
+      <section id="work">
+        <ProjectsSection />
+      </section>
       <ContactSection />
-
-      {/* <Footer/> */}
+      <Footer />
     </div>
   );
 };
