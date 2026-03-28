@@ -157,7 +157,7 @@ const Portfolio = () => {
       <div className="absolute bottom-12 right-12 w-16 h-16 border-r-2 border-b-2 border-purple-300/40 pointer-events-none" />
 
       {/* Main content */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 py-28 md:py-32">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 py-20 md:py-24">
         <motion.div
           variants={container}
           initial="hidden"
@@ -268,7 +268,7 @@ const Portfolio = () => {
           {/* Scroll hint */}
           <motion.div
             variants={fadeUp}
-            className="mt-20 flex flex-col items-center gap-2 text-gray-400"
+            className="mt-10 flex flex-col items-center gap-2 text-gray-400"
           >
             <span className="text-[10px] tracking-[0.25em] uppercase font-Jost">
               Scroll

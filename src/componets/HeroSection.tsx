@@ -18,7 +18,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="min-h-screen relative overflow-hidden py-24 md:py-0 bg-gradient-to-br from-white via-pink-50/10 to-purple-50/20">
+    <section className="relative overflow-hidden py-16 md:py-20 bg-gradient-to-br from-white via-pink-50/10 to-purple-50/20">
       {particlesReady && (
         <Particles
           id="hero-particles"
@@ -48,7 +48,7 @@ export default function HeroSection() {
         />
       )}
 
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 pt-8 md:pt-0">
+      <div className="relative z-10 flex flex-col items-center justify-center px-4">
         {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

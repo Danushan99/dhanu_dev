@@ -62,7 +62,7 @@ const processes: Process[] = [
 
 const DevelopmentProcess = () => {
 	return (
-		<section className="py-16 md:py-20 relative">
+		<section className="py-12 md:py-16 relative bg-gray-50/50">
 			<div className="container mx-auto px-4">
 				<h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-center text-gray-900">Development Process</h2>
 				<p className="text-sm sm:text-base text-gray-600 text-center mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
