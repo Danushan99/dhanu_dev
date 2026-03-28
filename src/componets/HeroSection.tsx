@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { TypeAnimation } from "react-type-animation";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
@@ -19,7 +18,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="min-h-screen relative overflow-hidden py-24 md:py-0">
+    <section className="min-h-screen relative overflow-hidden py-24 md:py-0 bg-gradient-to-br from-white via-pink-50/10 to-purple-50/20">
       {particlesReady && (
         <Particles
           id="hero-particles"
@@ -40,7 +39,7 @@ export default function HeroSection() {
                 speed: 0.8,
                 outModes: { default: "bounce" },
               },
-              number: { value: 55, density: { enable: true, area: 900 } },
+              number: { value: 55, density: { enable: true } },
               opacity: { value: 0.4 },
               size: { value: { min: 1, max: 3 } },
             },

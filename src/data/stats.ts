@@ -14,19 +14,19 @@ export const stats: Stat[] = [
   },
   {
     label: 'Projects Delivered',
-    value: 10,
+    value: 12,
     suffix: '+',
     description: 'Production mobile & web apps',
   },
   {
     label: 'Flutter Apps',
-    value: 6,
-    suffix: '',
+    value: 7,
+    suffix: '+',
     description: 'Cross-platform mobile applications',
   },
   {
     label: 'Happy Clients',
-    value: 8,
+    value: 10,
     suffix: '+',
     description: 'Freelance and enterprise clients',
   },
