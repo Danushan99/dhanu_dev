@@ -5,10 +5,13 @@ import { Link } from "react-scroll";
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 100);
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(total > 0 ? (window.scrollY / total) * 100 : 0);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -27,9 +30,11 @@ const NavBar = () => {
   return (
     <div
       className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isSticky ? "shadow-md bg-white/90 backdrop-blur-sm" : "bg-transparent"
+        isSticky ? "shadow-sm bg-white/90 backdrop-blur-md" : "bg-transparent"
       }`}
     >
+      {/* Scroll progress bar */}
+      <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-600 transition-all duration-100" style={{ width: `${scrollProgress}%` }} />
       {/* Main Nav */}
       <nav className="py-4 lg:px-14 px-4">
         <div className="flex justify-between items-center gap-8 border-b-2 border-white/40">
@@ -52,7 +57,7 @@ const NavBar = () => {
                   smooth={true}
                   duration={600}
                   offset={-80}
-                  className="cursor-pointer hover:text-blue-600 transition-colors"
+                  className="cursor-pointer hover:text-pink-500 transition-colors"
                 >
                   {link}
                 </Link>
@@ -63,10 +68,10 @@ const NavBar = () => {
           {/* Social Icons */}
           <div className="space-x-12 hidden lg:flex items-center">
             <a href="https://www.instagram.com/dhanu_thazan_/" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="w-6 h-6 text-black hover:text-blue-600 duration-150" />
+              <FaInstagram className="w-6 h-6 text-black hover:text-pink-500 duration-150" />
             </a>
             <a href="https://www.facebook.com/danu.deviil/" target="_blank" rel="noopener noreferrer">
-              <FaFacebookF className="w-6 h-6 text-black hover:text-blue-600 duration-150" />
+              <FaFacebookF className="w-6 h-6 text-black hover:text-pink-500 duration-150" />
             </a>
           </div>
 

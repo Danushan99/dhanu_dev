@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub } from 'react-icons/fa';
-import { FiExternalLink } from 'react-icons/fi';
+import { FaGithub, FaGooglePlay, FaApple } from 'react-icons/fa';
 import { projects, Project } from '../data/projects';
 
 type Category = 'all' | 'mobile' | 'web' | 'fullstack';
@@ -11,6 +10,34 @@ const categoryColors: Record<string, { bg: string; text: string; dot: string }> 
   web: { bg: 'bg-emerald-50', text: 'text-emerald-600', dot: 'bg-emerald-400' },
   fullstack: { bg: 'bg-violet-50', text: 'text-violet-600', dot: 'bg-violet-400' },
 };
+
+function CardImage({ project }: { project: Project }) {
+  if (project.image) {
+    return (
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      />
+    );
+  }
+
+  // Gradient placeholder with app icon feel
+  return (
+    <div className={`w-full h-full bg-gradient-to-br ${project.imagePlaceholder ?? 'from-gray-400 to-gray-600'} flex items-center justify-center group-hover:scale-105 transition-transform duration-500`}>
+      <div className="text-center">
+        <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-2 border border-white/30">
+          <span className="text-white text-2xl font-bold font-EB-Garamond">
+            {project.title.charAt(0)}
+          </span>
+        </div>
+        <span className="text-white/70 text-[10px] font-medium tracking-wide uppercase">
+          {project.category}
+        </span>
+      </div>
+    </div>
+  );
+}
 
 function AppCard({ project, index }: { project: Project; index: number }) {
   const cat = categoryColors[project.category] ?? categoryColors.web;
@@ -24,20 +51,23 @@ function AppCard({ project, index }: { project: Project; index: number }) {
       whileHover={{ y: -4, transition: { duration: 0.2 } }}
       className="group bg-white rounded-2xl border border-gray-100 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(236,72,153,0.12)] transition-shadow duration-300 overflow-hidden flex flex-col"
     >
-      {/* Screenshot */}
+      {/* Screenshot / Placeholder */}
       <div className="relative overflow-hidden" style={{ height: 148 }}>
-        {project.featured && (
-          <div className="absolute top-2.5 left-2.5 z-10">
+        {/* Badges */}
+        <div className="absolute top-2.5 left-2.5 z-10 flex flex-col gap-1">
+          {project.featured && (
             <span className="px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.15em] bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full shadow-sm">
               Featured
             </span>
-          </div>
-        )}
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
+          )}
+          {project.badge && (
+            <span className="px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.12em] bg-white/90 backdrop-blur-sm text-gray-700 rounded-full shadow-sm border border-white/60 flex items-center gap-1">
+              {project.badge}
+            </span>
+          )}
+        </div>
+
+        <CardImage project={project} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
       </div>
 
@@ -51,32 +81,50 @@ function AppCard({ project, index }: { project: Project; index: number }) {
           {project.category}
         </span>
 
-        {/* Title + GET button */}
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="font-bold text-gray-900 text-[15px] leading-snug flex-1">
-            {project.title.split('—')[0].trim()}
-          </h3>
+        {/* Title */}
+        <h3 className="font-bold text-gray-900 text-[15px] leading-snug">
+          {project.title.split('—')[0].trim()}
+        </h3>
+
+        {/* Store / action buttons */}
+        <div className="flex flex-wrap gap-1.5">
           {project.githubUrl && (
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 px-3 py-1 text-[11px] font-bold text-gray-700 border border-gray-200 rounded-full hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-200 flex items-center gap-1"
+              className="px-3 py-1 text-[11px] font-bold text-gray-700 border border-gray-200 rounded-full hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-200 flex items-center gap-1"
             >
               <FaGithub size={10} />
               GET
             </a>
           )}
-          {!project.githubUrl && project.liveUrl && (
+          {project.liveUrl && (
             <a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 px-3 py-1 text-[11px] font-bold text-pink-600 border border-pink-200 rounded-full hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all duration-200 flex items-center gap-1"
+              className="px-3 py-1 text-[11px] font-bold text-green-700 border border-green-200 rounded-full hover:bg-green-600 hover:text-white hover:border-green-600 transition-all duration-200 flex items-center gap-1"
             >
-              <FiExternalLink size={10} />
-              OPEN
+              <FaGooglePlay size={10} />
+              Play
             </a>
+          )}
+          {project.iosUrl && (
+            <a
+              href={project.iosUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1 text-[11px] font-bold text-gray-800 border border-gray-200 rounded-full hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-200 flex items-center gap-1"
+            >
+              <FaApple size={10} />
+              iOS
+            </a>
+          )}
+          {!project.githubUrl && !project.liveUrl && !project.iosUrl && (
+            <span className="px-3 py-1 text-[11px] text-gray-400 border border-gray-100 rounded-full">
+              Private
+            </span>
           )}
         </div>
 
@@ -103,20 +151,6 @@ function AppCard({ project, index }: { project: Project; index: number }) {
         </div>
       </div>
 
-      {/* Live Demo footer strip — only if both links exist */}
-      {project.liveUrl && project.githubUrl && (
-        <div className="px-4 pb-4">
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-1.5 w-full py-2 rounded-xl text-[11px] font-semibold text-pink-600 bg-pink-50 hover:bg-pink-600 hover:text-white transition-all duration-200"
-          >
-            <FiExternalLink size={11} />
-            Live Demo
-          </a>
-        </div>
-      )}
     </motion.div>
   );
 }
@@ -135,7 +169,6 @@ export default function ProjectsSection() {
 
   return (
     <section className="relative py-20 px-6 md:px-16 overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-pink-50/20 to-purple-50/30" />
 
       <div className="relative z-10 max-w-5xl mx-auto space-y-10">
