@@ -3,66 +3,66 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="bg-nav_bar">
-      <div className="max-w-screen-lg py-10 px-4 sm:px-6 text-gray-1 sm:flex justify-between mx-auto">
-        <div className="p-5 sm:w-2/12 border-r">
-          <div className="text-sm uppercase text-gray-1 font-bold">Menu</div>
+    <div className="bg-gray-900 text-white">
+      <div className="max-w-screen-lg py-10 px-4 sm:px-6 sm:flex justify-between mx-auto">
+        <div className="p-5 sm:w-2/12 border-r border-gray-700">
+          <div className="text-sm uppercase text-gray-300 font-bold">Menu</div>
           <ul>
             <li className="my-2">
-              <a className="hover:text-war" href="">
+              <a className="text-gray-400 hover:text-blue-400 transition-colors" href="#">
                 Home
               </a>
             </li>
             <li className="my-2">
-              <a className="hover:text-war" href="">
+              <a className="text-gray-400 hover:text-blue-400 transition-colors" href="#">
                 About
               </a>
             </li>
             <li className="my-2">
-              <a className="hover:text-war" href="">
-                Services
+              <a className="text-gray-400 hover:text-blue-400 transition-colors" href="#">
+                Projects
               </a>
             </li>
             <li className="my-2">
-              <a className="hover:text-war" href="">
+              <a className="text-gray-400 hover:text-blue-400 transition-colors" href="#">
                 Contact
               </a>
             </li>
           </ul>
         </div>
-        <div className="p-5 sm:w-7/12 border-r text-center">
-          <h3 className="font-bold text-xl text-gray-1 mb-4">Quick Bio</h3>
-          <p className="text-gray-500 text-sm mb-10">
+        <div className="p-5 sm:w-7/12 border-r border-gray-700 text-center">
+          <h3 className="font-bold text-xl text-white mb-4">Quick Bio</h3>
+          <p className="text-gray-400 text-sm mb-10">
             I am a highly self-motivated and enthusiastic individual with
             excellent communication and interpersonal skills.
           </p>
         </div>
         <div className="p-5 sm:w-3/12">
-          <div className="text-sm uppercase text-gray-1 font-bold">
-            Contact Us
+          <div className="text-sm uppercase text-gray-300 font-bold">
+            Contact
           </div>
           <ul>
             <li className="my-2">
-              <a className="hover:text-war" href="#">
-                No 6/9 , Ben & Nancy Tower Ramakrishna Road Colombo Srilanka
+              <a className="text-gray-400 hover:text-blue-400 transition-colors text-sm" href="#">
+                Colombo, Sri Lanka
               </a>
             </li>
             <li className="my-2">
               <a
-                className="hover:text-war"
+                className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 href="mailto:Danuthasan008@gmail.com"
               >
-                Danuthasan008@gmail.com.com
+                Danuthasan008@gmail.com
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div className="flex py-5 m-auto text-gray-800 text-sm flex-col items-center border-t max-w-screen-xl">
-        <div className="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-          <a href="https://www.facebook.com/danu.deviil/" className="w-6 mx-1">
+      <div className="flex py-5 m-auto text-gray-400 text-sm flex-col items-center border-t border-gray-700 max-w-screen-xl">
+        <div className="md:flex-auto md:flex-row-reverse mt-2 flex-row flex gap-4">
+          <a href="https://www.facebook.com/danu.deviil/" className="w-6 mx-1 hover:text-blue-400 transition-colors">
             <svg
-              className="fill-current cursor-pointer text-gray-500 hover:text-war"
+              className="fill-current cursor-pointer"
               width="100%"
               height="100%"
               viewBox="0 0 24 24"
@@ -86,12 +86,9 @@ function Footer() {
             </svg>
           </a>
 
-          <a
-            href="https://www.linkedin.com/in/danushan-r/"
-            className="w-6 mx-1"
-          >
+          <a href="https://www.linkedin.com/in/danushan-r/" className="w-6 mx-1 hover:text-blue-400 transition-colors">
             <svg
-              className="fill-current cursor-pointer text-gray-500 hover:text-war"
+              className="fill-current cursor-pointer"
               width="100%"
               height="100%"
               viewBox="0 0 24 24"
@@ -107,12 +104,9 @@ function Footer() {
               <path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zM8.951 9.404H6.165V17.5H8.95V9.404zm6.841-.192c-1.324 0-1.993.629-2.385 1.156l-.127.181V9.403h-2.786l.01.484c.006.636.007 1.748.005 2.93l-.015 4.683h2.786v-4.522c0-.242.018-.484.092-.657.202-.483.66-.984 1.43-.984.955 0 1.367.666 1.408 1.662l.003.168V17.5H19v-4.643c0-2.487-1.375-3.645-3.208-3.645zM7.576 5.5C6.623 5.5 6 6.105 6 6.899c0 .73.536 1.325 1.378 1.392l.18.006c.971 0 1.577-.621 1.577-1.398C9.116 6.105 8.53 5.5 7.576 5.5z" />
             </svg>
           </a>
-          <a
-            href="https://www.instagram.com/dhanu_thazan_/"
-            className="w-6 mx-1"
-          >
+          <a href="https://www.instagram.com/dhanu_thazan_/" className="w-6 mx-1 hover:text-blue-400 transition-colors">
             <svg
-              className="fill-current cursor-pointer text-gray-500 hover:text-war"
+              className="fill-current cursor-pointer"
               width="100%"
               height="100%"
               viewBox="0 0 24 24"
@@ -129,7 +123,7 @@ function Footer() {
             </svg>
           </a>
         </div>
-        <div className="my-5">© Copyright 2024. Danushan Ravindran</div>
+        <div className="my-5 text-gray-500">© Copyright 2025. Danushan Ravindran</div>
       </div>
     </div>
   );

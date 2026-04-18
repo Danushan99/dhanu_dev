@@ -1,17 +1,46 @@
 'use client';
+import { useState, useRef, FormEvent } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
+	const formRef = useRef<HTMLFormElement>(null);
+	const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+	const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+	const handleSubmit = async (e: FormEvent) => {
+		e.preventDefault();
+		setStatus('sending');
+		try {
+			await emailjs.sendForm(
+				import.meta.env.VITE_EMAILJS_SERVICE_ID,
+				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+				formRef.current!,
+				import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+			);
+			setStatus('success');
+			setFormState({ name: '', email: '', message: '' });
+			setTimeout(() => setStatus('idle'), 4000);
+		} catch {
+			setStatus('error');
+			setTimeout(() => setStatus('idle'), 4000);
+		}
+	};
+
 	return (
-		<section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
-			<div className="max-w-4xl mx-auto">
+		<section id="contact" className="relative py-20 px-4 overflow-hidden">
+			<div className="absolute inset-0 bg-gradient-to-br from-white via-pink-50/20 to-purple-50/30" />
+			<div className="relative z-10 max-w-4xl mx-auto">
 				<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center space-y-8">
-					<h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-						Let&apos;s Create Amazing Mobile Experiences
+					<p className="font-Jost text-gray-400 text-xs tracking-[0.22em] uppercase">Get In Touch</p>
+					<h2 className="font-EB-Garamond text-4xl md:text-5xl font-bold text-gray-900">
+						Let&apos;s Build Something{' '}
+						<span className="bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-600 bg-clip-text text-transparent">
+							Amazing
+						</span>
 					</h2>
-					<p className="text-gray-600 max-w-2xl mx-auto">
-						Ready to bring your mobile app idea to life? I specialize in creating polished, user-friendly mobile applications that deliver exceptional
-						experiences.
+					<p className="text-gray-500 text-sm max-w-xl mx-auto leading-relaxed">
+						Ready to bring your mobile or web idea to life? I specialize in crafting polished, user-friendly applications that deliver exceptional experiences.
 					</p>
 
 					{/* Location */}
@@ -28,11 +57,79 @@ const ContactSection = () => {
 						<span>Colombo, Srilanka</span>
 					</div>
 
+					{/* Contact Form */}
+					<motion.form
+						ref={formRef}
+						onSubmit={handleSubmit}
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ delay: 0.2 }}
+						className="bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm space-y-4 text-left max-w-lg mx-auto"
+					>
+						<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+							<div className="space-y-1">
+								<label className="text-sm font-medium text-gray-700" htmlFor="name">Name</label>
+								<input
+									id="name"
+									name="from_name"
+									type="text"
+									required
+									value={formState.name}
+									onChange={(e) => setFormState((s) => ({ ...s, name: e.target.value }))}
+									placeholder="Your name"
+									className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+								/>
+							</div>
+							<div className="space-y-1">
+								<label className="text-sm font-medium text-gray-700" htmlFor="email">Email</label>
+								<input
+									id="email"
+									name="from_email"
+									type="email"
+									required
+									value={formState.email}
+									onChange={(e) => setFormState((s) => ({ ...s, email: e.target.value }))}
+									placeholder="your@email.com"
+									className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+								/>
+							</div>
+						</div>
+						<div className="space-y-1">
+							<label className="text-sm font-medium text-gray-700" htmlFor="message">Message</label>
+							<textarea
+								id="message"
+								name="message"
+								required
+								rows={4}
+								value={formState.message}
+								onChange={(e) => setFormState((s) => ({ ...s, message: e.target.value }))}
+								placeholder="Tell me about your project..."
+								className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none transition"
+							/>
+						</div>
+						<motion.button
+							type="submit"
+							disabled={status === 'sending'}
+							whileHover={{ scale: 1.02 }}
+							whileTap={{ scale: 0.98 }}
+							className="w-full py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full font-semibold text-sm disabled:opacity-60 disabled:cursor-not-allowed transition-opacity shadow-lg shadow-pink-500/20"
+						>
+							{status === 'sending' ? 'Sending...' : 'Send Message'}
+						</motion.button>
+						{status === 'success' && (
+							<p className="text-sm text-green-600 text-center font-medium">Message sent! I'll get back to you soon.</p>
+						)}
+						{status === 'error' && (
+							<p className="text-sm text-red-500 text-center font-medium">Something went wrong. Try emailing directly.</p>
+						)}
+					</motion.form>
+
 					{/* Contact Buttons */}
 					<div className="flex flex-col sm:flex-row justify-center gap-4">
 						<a
 							href="mailto:danuthasan08@gmail.com"
-							className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2 shadow-lg shadow-purple-500/20"
+							className="px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full font-semibold hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2 shadow-lg shadow-pink-500/20"
 						>
 							<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
 								<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
